@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Portfolio - Editkaro.in | Video Editing Showcase">
+    <meta name="description" content="Explore our portfolio of professional video editing projects including short form, gaming, ads, documentaries, and more. See the quality of work we deliver.">
+    <meta name="keywords" content="video editing portfolio, gaming edits, football edits, ecommerce ads, documentary editing, color grading">
+    <meta name="robots" content="index, follow">
+    <title>Portfolio - Editkaro.in</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial Black'>E</text></svg>">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center font-bold text-xl">E</div>
+                    <span class="text-xl font-bold">Editkaro<span class="gradient-text">.in</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-300 hover:text-white transition">Home</a>
+                    <a href="portfolio.html" class="nav-link text-indigo-400 font-medium">Portfolio</a>
+                    <a href="about.html" class="nav-link text-gray-300 hover:text-white transition">About</a>
+                    <a href="contact.html" class="nav-link text-gray-300 hover:text-white transition">Contact</a>
+                    <a href="contact.html" class="gradient-bg px-6 py-2 rounded-full font-medium hover:opacity-90 transition">Get Started</a>
+                </div>
+                <button id="menuBtn" class="md:hidden p-2">
+                    <div class="w-6 h-5 flex flex-col justify-between">
+                        <span class="hamburger-line w-full h-0.5 bg-white"></span>
+                        <span class="hamburger-line w-full h-0.5 bg-white"></span>
+                        <span class="hamburger-line w-full h-0.5 bg-white"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-gray-300 hover:text-white py-2">Home</a>
+                <a href="portfolio.html" class="block text-indigo-400 font-medium py-2">Portfolio</a>
+                <a href="about.html" class="block text-gray-300 hover:text-white py-2">About</a>
+                <a href="contact.html" class="block text-gray-300 hover:text-white py-2">Contact</a>
+                <a href="contact.html" class="block gradient-bg text-center py-3 rounded-full font-medium">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 right-10 w-72 h-72 bg-indigo-500 rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-20 left-10 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Our Work</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">
+                    Creative Excellence in <span class="gradient-text">Every Frame</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    From viral short-form content to cinematic documentaries, explore our diverse portfolio of video editing projects that drive engagement and results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="filter-btn active px-6 py-3 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition" data-category="all">
+                    All Projects
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="short-form">
+                    Short Form
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="long-form">
+                    Long Form
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="gaming">
+                    Gaming
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="football">
+                    Football Edits
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="ecommerce">
+                    eCommerce Ads
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="documentary">
+                    Documentary
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="color-grading">
+                    Color Grading
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="anime">
+                    Anime
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-800 text-gray-300 font-medium hover:bg-gray-700 transition" data-category="ads">
+                    Ads
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-12 bg-gray-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="portfolioGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Short Form 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="short-form">
+                    <div class="relative aspect-video bg-gradient-to-br from-pink-500 to-purple-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-play text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            0:45
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-pink-400 text-sm font-semibold uppercase">Short Form</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Instagram Reel - Product Launch</h3>
+                        <p class="text-gray-400 text-sm mb-4">High-energy short form content with dynamic transitions and text animations</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 2.5M</span>
+                                <span><i class="fas fa-heart mr-1"></i> 180K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="gaming">
+                    <div class="relative aspect-video bg-gradient-to-br from-green-500 to-teal-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-gamepad text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            8:23
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-400 text-sm font-semibold uppercase">Gaming</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">PUBG Mobile Montage</h3>
+                        <p class="text-gray-400 text-sm mb-4">Epic gaming montage with synchronized music and cinematic effects</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 450K</span>
+                                <span><i class="fas fa-heart mr-1"></i> 32K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Long Form 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="long-form">
+                    <div class="relative aspect-video bg-gradient-to-br from-blue-500 to-indigo-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-film text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            15:32
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-blue-400 text-sm font-semibold uppercase">Long Form</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">YouTube Tutorial Series</h3>
+                        <p class="text-gray-400 text-sm mb-4">Comprehensive tutorial with chapters, graphics, and professional voiceover</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 890K</span>
+                                <span><i class="fas fa-heart mr-1"></i> 56K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Football Edits 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="football">
+                    <div class="relative aspect-video bg-gradient-to-br from-red-500 to-orange-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-futbol text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            3:45
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-red-400 text-sm font-semibold uppercase">Football</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Champions League Highlights</h3>
+                        <p class="text-gray-400 text-sm mb-4">Fast-paced football highlights with dramatic music and slow-motion replays</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 1.2M</span>
+                                <span><i class="fas fa-heart mr-1"></i> 95K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- eCommerce Ads 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="ecommerce">
+                    <div class="relative aspect-video bg-gradient-to-br from-amber-500 to-yellow-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            0:30
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-amber-400 text-sm font-semibold uppercase">eCommerce</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Fashion Brand Ad Campaign</h3>
+                        <p class="text-gray-400 text-sm mb-4">High-converting product ad with lifestyle shots and call-to-action</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 3.8M</span>
+                                <span><i class="fas fa-heart mr-1"></i> 210K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentary 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="documentary">
+                    <div class="relative aspect-video bg-gradient-to-br from-slate-600 to-gray-700 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-video text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            22:15
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-slate-400 text-sm font-semibold uppercase">Documentary</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Wildlife Conservation Story</h3>
+                        <p class="text-gray-400 text-sm mb-4">Cinematic documentary with narrative structure and emotional storytelling</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 650K</span>
+                                <span><i class="fas fa-heart mr-1"></i> 48K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Color Grading 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="color-grading">
+                    <div class="relative aspect-video bg-gradient-to-br from-cyan-500 to-blue-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-palette text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            5:12
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-cyan-400 text-sm font-semibold uppercase">Color Grading</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Cinematic Music Video</h3>
+                        <p class="text-gray-400 text-sm mb-4">Professional color grading with moody cinematic look and feel</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 1.5M</span>
+                                <span><i class="fas fa-heart mr-1"></i> 125K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anime 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="anime">
+                    <div class="relative aspect-video bg-gradient-to-br from-purple-500 to-pink-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-dragon text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            2:30
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-purple-400 text-sm font-semibold uppercase">Anime</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Anime AMV - Action Scenes</h3>
+                        <p class="text-gray-400 text-sm mb-4">Dynamic anime music video with beat-synced edits and effects</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 780K</span>
+                                <span><i class="fas fa-heart mr-1"></i> 67K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ads 1 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="ads">
+                    <div class="relative aspect-video bg-gradient-to-br from-rose-500 to-red-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-bullhorn text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            0:15
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-rose-400 text-sm font-semibold uppercase">Ads</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Tech Startup Promo</h3>
+                        <p class="text-gray-400 text-sm mb-4">15-second attention-grabbing ad for social media platforms</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 5.2M</span>
+                                <span><i class="fas fa-heart mr-1"></i> 320K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional items for each category -->
+                
+                <!-- Short Form 2 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="short-form">
+                    <div class="relative aspect-video bg-gradient-to-br from-violet-500 to-purple-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-play text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            0:58
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-pink-400 text-sm font-semibold uppercase">Short Form</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">TikTok Viral Challenge</h3>
+                        <p class="text-gray-400 text-sm mb-4">Trending challenge video with creative transitions and effects</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 4.1M</span>
+                                <span><i class="fas fa-heart mr-1"></i> 290K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming 2 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="gaming">
+                    <div class="relative aspect-video bg-gradient-to-br from-emerald-500 to-green-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-gamepad text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            12:05
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-green-400 text-sm font-semibold uppercase">Gaming</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Valorant Competitive Highlights</h3>
+                        <p class="text-gray-400 text-sm mb-4">Professional esports highlight reel with player cams and commentary</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 620K</span>
+                                <span><i class="fas fa-heart mr-1"></i> 45K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Long Form 2 -->
+                <div class="portfolio-item card-hover bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 group" data-category="long-form">
+                    <div class="relative aspect-video bg-gradient-to-br from-sky-500 to-blue-600 overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-film text-5xl text-white/80"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 px-3 py-1 rounded-full text-sm font-medium">
+                            28:40
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-blue-400 text-sm font-semibold uppercase">Long Form</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Brand Documentary</h3>
+                        <p class="text-gray-400 text-sm mb-4">Behind-the-scenes brand story with interviews and b-roll footage</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                <span><i class="fas fa-eye mr-1"></i> 1.1M</span>
+                                <span><i class="fas fa-heart mr-1"></i> 78K</span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300 transition">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-800/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">Like What You See?</h2>
+            <p class="text-gray-400 text-lg mb-8">Let's create something amazing for your brand. Get in touch with us today!</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact.html" class="gradient-bg px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition inline-flex items-center">
+                    <i class="fas fa-rocket mr-2"></i> Start Your Project
+                </a>
+                <a href="about.html" class="border-2 border-gray-600 px-8 py-4 rounded-full font-semibold text-lg hover:border-indigo-500 hover:text-indigo-400 transition inline-flex items-center">
+                    <i class="fas fa-users mr-2"></i> Meet Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center font-bold text-xl">E</div>
+                        <span class="text-xl font-bold">Editkaro<span class="gradient-text">.in</span></span>
+                    </a>
+                    <p class="text-gray-400 mb-4">Professional video editing and social media marketing agency helping brands grow online.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 transition" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 transition" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 transition" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 transition" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-indigo-400 transition">Home</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-indigo-400 transition">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-indigo-400 transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-indigo-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-indigo-400 transition">Video Editing</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-indigo-400 transition">Social Media Marketing</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-indigo-400 transition">Color Grading</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-indigo-400 transition">Ad Creation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2 text-indigo-400"></i> hello@editkaro.in</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-2 text-indigo-400"></i> +91 98765 43210</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-indigo-400"></i> Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Editkaro.in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
